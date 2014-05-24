@@ -14,6 +14,7 @@
             "scripts/background.js"
         ]
     },
+    "devtools_page": "devtools.html",
   "page_action": {
     "default_icon": {
       "19": "images/icon-19.png",
