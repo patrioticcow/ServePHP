@@ -1,16 +1,12 @@
-.CodeMirror { border : 1px solid #e2e2e2; height : auto; }
+.servephp_body .CodeMirror { border : 1px solid #e2e2e2; height : auto; }
 
-.CodeMirror-scroll { overflow-y : hidden; overflow-x : auto; }
-
-.breakpoints { width : .8em; }
-
-.breakpoint { color : #882222; }
+.servephp_body .CodeMirror-scroll { overflow-y : hidden; overflow-x : auto; }
 
 .servephp_body { background : #ffffff; }
 
-#response { border : 1px solid #e2e2e2; height : auto; min-height : 100px; margin : 20px 0 0 0; padding : 2px; }
+.servephp_body #response { border : 1px solid #e2e2e2; height : auto; min-height : 100px; margin : 20px 0 0 0; padding : 2px; }
 
-.btn {
+.servephp_body .btn {
 	width               : 100%;
 	margin              : 10px 0;
 	color               : #ffffff;
@@ -25,7 +21,7 @@
 	padding             : 6px 12px;
 }
 
-.CodeMirror-fullscreen {
+.servephp_body .CodeMirror-fullscreen {
 	position: fixed;
 	top: 0; left: 0; right: 0; bottom: 0;
 	height: auto;
