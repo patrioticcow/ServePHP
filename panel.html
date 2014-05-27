@@ -24,8 +24,7 @@
 </p>
 
 <form>
-<textarea name="myTextArea" id="myTextArea">
-<?php
+	<textarea name="myTextArea" id="myTextArea"><?php
 
 date_default_timezone_set('UTC');
 
@@ -48,12 +47,21 @@ echo date('m-d-Y', time());
 ?></textarea>
 </form>
 
+<button class="btn" id="get_results">Submit</button>
+
+<div id="wait_for_it" style="display: none">Wait fot it..</div>
+
 <div id="response"></div>
+
+<p>Press <strong>F11</strong> when cursor is in the editor to toggle full screen editing. <strong>Esc</strong> can also be used to <i>exit</i> full screen editing. </p>
+<p>I couldn't have done this without <a href="http://codemirror.net/" target="_blank">CodeMirror</a>. Or could i?</p>
 
 <script src="codemirror/lib/codemirror.js"></script>
 
 <script src="codemirror/addon/selection/active-line.js"></script>
 <script src="codemirror/addon/edit/matchbrackets.js"></script>
+<script src="codemirror/addon/edit/closebrackets.js"></script>
+<script src="codemirror/addon/display/fullscreen.js"></script>
 
 <script src="codemirror/mode/xml/xml.js"></script>
 <script src="codemirror/mode/javascript/javascript.js"></script>

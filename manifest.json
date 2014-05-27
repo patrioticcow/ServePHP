@@ -1,10 +1,12 @@
 {
-    "name": "__MSG_appName__",
-    "version": "0.0.1",
+    "name": "ServePHP",
+    "version": "0.1.1",
     "manifest_version": 2,
-    "description": "__MSG_appDescription__",
+    "description": "Get your PHP on",
     "icons": {
         "16": "images/icon-16.png",
+        "19": "images/icon-19.png",
+        "38": "images/icon-38.png",
         "128": "images/icon-128.png"
     },
     "default_locale": "en",
@@ -15,36 +17,27 @@
         ]
     },
     "devtools_page": "devtools.html",
-  "page_action": {
-    "default_icon": {
-      "19": "images/icon-19.png",
-      "38": "images/icon-38.png"
-    },
-    "default_title": "ServePHP",
-    "default_popup": "popup.html"
-  },
-  "options_page": "options.html",
-  "content_scripts": [
-    {
-      "matches": [
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ],
+            "css": [
+                "styles/main.css"
+            ],
+            "js": [
+                "scripts/contentscript.js"
+            ],
+            "run_at": "document_end",
+            "all_frames": false
+        }
+    ],
+    "permissions": [
+        "tabs",
+        "history",
+        "management",
         "http://*/*",
         "https://*/*"
-      ],
-      "css": [
-        "styles/main.css"
-      ],
-      "js": [
-        "scripts/contentscript.js"
-      ],
-      "run_at": "document_end",
-      "all_frames": false
-    }
-  ],
-  "permissions": [
-    "tabs",
-    "history",
-    "management",
-    "http://*/*",
-    "https://*/*"
-  ]
+    ]
 }

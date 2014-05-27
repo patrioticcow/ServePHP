@@ -6,8 +6,28 @@
 
 .breakpoint { color : #882222; }
 
-iframe { width : 100%; height : 300px; border : 1px solid #e2e2e2; }
-
 .servephp_body { background : #ffffff; }
 
 #response { border : 1px solid #e2e2e2; height : auto; min-height : 100px; margin : 20px 0 0 0; padding : 2px; }
+
+.btn {
+	width               : 100%;
+	margin              : 10px 0;
+	color               : #ffffff;
+	background-color    : #428bca;
+	border-color        : #357ebd;
+	display             : inline-block;
+	font-weight         : 400;
+	text-align          : center;
+	vertical-align      : middle;
+	cursor              : pointer;
+	white-space         : nowrap;
+	padding             : 6px 12px;
+}
+
+.CodeMirror-fullscreen {
+	position: fixed;
+	top: 0; left: 0; right: 0; bottom: 0;
+	height: auto;
+	z-index: 9;
+}

@@ -11,10 +11,17 @@ var editor = CodeMirror.fromTextArea(myTextArea, {
     matchBrackets: true,
     viewportMargin: Infinity,
     indentUnit: 4,
-    theme: 'mdn-like'
+    autoCloseBrackets: true,
+    theme: 'mdn-like',
+    extraKeys: {
+        "F11": function (cm) {
+            cm.setOption("fullScreen", !cm.getOption("fullScreen"));
+        },
+        "Esc": function (cm) {
+            if (cm.getOption("fullScreen")) cm.setOption("fullScreen", false);
+        }
+    }
 });
-
-// theme
 
 var input = document.getElementById("select");
 input.addEventListener('change', selectTheme);
@@ -28,6 +35,12 @@ if (choice) {
     input.value = choice;
     editor.setOption("theme", choice);
 }
+
+var getResults = document.getElementById('get_results');
+getResults.onclick = function () {
+    document.getElementById('wait_for_it').style.display = 'block';
+    loadXMLDoc(response, 'http://codemirror.massinflux.com?data=' + encodeURI(editor.getValue()));
+};
 
 loadXMLDoc(response, 'http://codemirror.massinflux.com?data=' + encodeURI(myTextArea.value));
 
@@ -43,6 +56,7 @@ function loadXMLDoc(div, path) {
     }
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            document.getElementById('wait_for_it').style.display = 'none';
             div.innerHTML = xmlhttp.responseText;
         }
     };

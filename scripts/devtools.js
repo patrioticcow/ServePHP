@@ -1,9 +1,7 @@
 chrome.devtools.panels.create("ServePHP",
-    "MyPanelIcon.png",
+    "icon-128.png",
     "panel.html",
     function(panel) {
-        console.log(panel);
 
-        // code invoked on panel creation
     }
 );
