@@ -39,10 +39,10 @@ if (choice) {
 var getResults = document.getElementById('get_results');
 getResults.onclick = function () {
     document.getElementById('wait_for_it').style.display = 'block';
-    loadXMLDoc(response, 'http://codemirror.massinflux.com?data=' + encodeURI(editor.getValue()));
+    loadXMLDoc(response, 'http://codemirror.massinflux.com?data=' + encodeURIComponent(editor.getValue()).replace(/%20/g,'+'));
 };
 
-loadXMLDoc(response, 'http://codemirror.massinflux.com?data=' + encodeURI(myTextArea.value));
+loadXMLDoc(response, 'http://codemirror.massinflux.com?data=' + encodeURIComponent(myTextArea.value).replace(/%20/g,'+'));
 
 function loadXMLDoc(div, path) {
     var xmlhttp;
