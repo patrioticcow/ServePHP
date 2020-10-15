@@ -16,7 +16,7 @@
 
 <body class="servephp_body">
 
-<p>Themes: <select id="select">
+<p>Select theme: <select id="select">
 	<option selected>default</option>
 	<option>mdn-like</option>
 	<option>monokai</option>
@@ -29,6 +29,7 @@
 date_default_timezone_set('UTC');
 
 echo date('m-d-Y', time());
+echo '<br>';
 echo md5('+');
 
 
@@ -54,8 +55,9 @@ echo md5('+');
 
 <div id="response"></div>
 
-<p>Press <strong>F11</strong> when cursor is in the editor to toggle full screen editing. <strong>Esc</strong> can also be used to <i>exit</i> full screen editing. </p>
-<p>I couldn't have done this without <a href="http://codemirror.net/" target="_blank">CodeMirror</a>. Or could i?</p>
+<p>Press <strong>F11</strong> when cursor is in the editor to toggle full screen editing. <br>
+	<strong>Esc</strong> can also be used to <i>exit</i> full screen editing. </p>
+<p>Credit: <a href="http://codemirror.net/" target="_blank">CodeMirror</a></p>
 
 <script src="codemirror/lib/codemirror.js"></script>
 

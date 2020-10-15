@@ -1,6 +1,6 @@
 {
     "name": "ServePHP",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "manifest_version": 2,
     "description": "Get your PHP on",
     "icons": {
@@ -34,9 +34,6 @@
         }
     ],
     "permissions": [
-        "tabs",
-        "history",
-        "management",
         "http://*/*",
         "https://*/*"
     ]
